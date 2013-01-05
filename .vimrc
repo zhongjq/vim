@@ -1,41 +1,60 @@
-syn on                      "è¯­æ³•æ”¯æŒ
+syn on                      "Óï·¨Ö§³Ö
 
-"common conf {{             é€šç”¨é…ç½®
-set ai                      "è‡ªåŠ¨ç¼©è¿›
-set bs=2                    "åœ¨insertæ¨¡å¼ä¸‹ç”¨é€€æ ¼é”®åˆ é™¤
-set showmatch               "ä»£ç åŒ¹é…
-set laststatus=2            "æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€è¡Œ
-set expandtab               "ä»¥ä¸‹ä¸‰ä¸ªé…ç½®é…åˆä½¿ç”¨ï¼Œè®¾ç½®tabå’Œç¼©è¿›ç©ºæ ¼æ•°
+"common conf {{             Í¨ÓÃÅäÖÃ
+set ai                      "×Ô¶¯Ëõ½ø
+set bs=2                    "ÔÚinsertÄ£Ê½ÏÂÓÃÍË¸ñ¼üÉ¾³ı
+set showmatch               "´úÂëÆ¥Åä
+set laststatus=2            "×ÜÊÇÏÔÊ¾×´Ì¬ĞĞ
+set expandtab               "ÒÔÏÂÈı¸öÅäÖÃÅäºÏÊ¹ÓÃ£¬ÉèÖÃtabºÍËõ½ø¿Õ¸ñÊı
 set shiftwidth=4
 set tabstop=4
-set cursorline              "ä¸ºå…‰æ ‡æ‰€åœ¨è¡ŒåŠ ä¸‹åˆ’çº¿
-set number                  "æ˜¾ç¤ºè¡Œå·
-set autoread                "æ–‡ä»¶åœ¨Vimä¹‹å¤–ä¿®æ”¹è¿‡ï¼Œè‡ªåŠ¨é‡æ–°è¯»å…¥
+set cursorline              "Îª¹â±êËùÔÚĞĞ¼ÓÏÂ»®Ïß
+set number                  "ÏÔÊ¾ĞĞºÅ
+set autoread                "ÎÄ¼şÔÚVimÖ®ÍâĞŞ¸Ä¹ı£¬×Ô¶¯ÖØĞÂ¶ÁÈë
 
-set ignorecase              "æ£€ç´¢æ—¶å¿½ç•¥å¤§å°å†™
-set fileencodings=uft-8,gbk "ä½¿ç”¨utf-8æˆ–gbkæ‰“å¼€æ–‡ä»¶
-set hls                     "æ£€ç´¢æ—¶é«˜äº®æ˜¾ç¤ºåŒ¹é…é¡¹
-set helplang=cn             "å¸®åŠ©ç³»ç»Ÿè®¾ç½®ä¸ºä¸­æ–‡
-set foldmethod=syntax       "ä»£ç æŠ˜å 
+set ignorecase              "¼ìË÷Ê±ºöÂÔ´óĞ¡Ğ´
+let &termencoding=&encoding
+set fileencodings=uft-8,gbk "Ê¹ÓÃutf-8»ògbk´ò¿ªÎÄ¼ş
+set hls                     "¼ìË÷Ê±¸ßÁÁÏÔÊ¾Æ¥ÅäÏî
+set helplang=cn             "°ïÖúÏµÍ³ÉèÖÃÎªÖĞÎÄ
+set foldmethod=syntax       "´úÂëÕÛµş
 "}}
 
-"conf for tabs, ä¸ºæ ‡ç­¾é¡µè¿›è¡Œçš„é…ç½®ï¼Œé€šè¿‡ctrl h/låˆ‡æ¢æ ‡ç­¾ç­‰
+"conf for tabs, Îª±êÇ©Ò³½øĞĞµÄÅäÖÃ£¬Í¨¹ıctrl h/lÇĞ»»±êÇ©µÈ
 let mapleader = ','
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 "nnoremap <leader>t : tabe<CR>
 
-"conf for plugins {{ æ’ä»¶ç›¸å…³çš„é…ç½®
-"çŠ¶æ€æ çš„é…ç½® 
+"conf for plugins {{ ²å¼şÏà¹ØµÄÅäÖÃ
+"×´Ì¬À¸µÄÅäÖÃ 
 "powerline{
 "set guifont=PowerlineSymbols\ for\ Powerline
+set guifont=Monaco:h12
 set nocompatible
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 "}
-"pathogenæ˜¯Vimç”¨æ¥ç®¡ç†æ’ä»¶çš„æ’ä»¶
+
+"taglist{
+let Tlist_Show_One_File = 1            "Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄtaglist£¬Ä¬ÈÏÊÇÏÔÊ¾¶à¸ö
+let Tlist_Exit_OnlyWindow = 1          "Èç¹ûtaglistÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³övim
+let Tlist_Use_Right_Window = 1         "ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist
+let Tlist_GainFocus_On_ToggleOpen = 1  "´ò¿ªtaglistÊ±£¬¹â±ê±£ÁôÔÚtaglist´°¿Ú
+let Tlist_Ctags_Cmd='/opt/local/bin/ctags'  "ÉèÖÃctagsÃüÁîµÄÎ»ÖÃ
+nnoremap <leader>tl : Tlist<CR>        "ÉèÖÃ¹Ø±ÕºÍ´ò¿ªtaglist´°¿ÚµÄ¿ì½İ¼ü
+"}
+
+"pathogenÊÇVimÓÃÀ´¹ÜÀí²å¼şµÄ²å¼ş
 "pathogen{
 call pathogen#infect()
 "}
 
 "}}
+
+
+set tags=tags;/      "ÔÚµ±Ç°Ä¿Â¼ÕÒ²»µ½tagsÎÄ¼şÊ±Çëµ½ÉÏ²ãÄ¿Â¼²éÕÒ
+
+set noimdisable
+set iminsert=0
+set imsearch=0
